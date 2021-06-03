@@ -1980,9 +1980,12 @@ var IconModule = /*#__PURE__*/Object.freeze({
     GithubIcon: Icon$$
 });
 
-var MenuButton = styled__default['default'](Button)(templateObject_1$x || (templateObject_1$x = __makeTemplateObject(["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"], ["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"])), function (_a) {
+var MenuButton = styled__default['default'](Button)(templateObject_1$x || (templateObject_1$x = __makeTemplateObject(["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n  background-color: ", ";\n"], ["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n  background-color: ", ";\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.text;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.colors.contrast;
 });
 MenuButton.defaultProps = {
     variant: "text",
@@ -2105,7 +2108,7 @@ var MenuEntry = styled__default['default'].div(templateObject_3$6 || (templateOb
     return (secondary ? "14px" : "16px");
 }, function (_a) {
     var secondary = _a.secondary, theme = _a.theme;
-    return (secondary ? theme.colors.background : "transparent");
+    return (secondary ? theme.colors.card : "transparent");
 }, function (_a) {
     var theme = _a.theme;
     return theme.colors.textSubtle;
@@ -2699,7 +2702,7 @@ var baseColors = {
 var brandColors = {
     binance: "#F0B90B",
 };
-var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#FAF9FA", backgroundDisabled: "#E9EAEB", contrast: "#191326", invertedContrast: "#FFFFFF", input: "#eeeaf4", tertiary: "#ff48c7", text: '#FFFFFF', textDisabled: '#915fa0', textSubtle: '#d5dae2', borderColor: "#E9EAEB", card: "#141520", gradients: {
+var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#FAF9FA", backgroundDisabled: "#E9EAEB", contrast: "#191326", invertedContrast: "#FFFFFF", input: "#191326", tertiary: "#ff48c7", text: '#FFFFFF', textDisabled: '#915fa0', textSubtle: '#d5dae2', borderColor: "#E9EAEB", card: "#141520", gradients: {
         bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
     } });
 var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#be7434", background: "#343135", backgroundDisabled: "#3c3742", contrast: "#FFFFFF", invertedContrast: "#191326", input: "#483f5a", 
@@ -2769,9 +2772,9 @@ var light$1 = (_a$2 = {},
         color: "#FFFFFF",
     },
     _a$2[SUBTLE] = {
-        background: lightColors.textSubtle,
-        backgroundActive: lightColors.textSubtle + "D9",
-        backgroundHover: lightColors.textSubtle + "B3",
+        background: lightColors.primary,
+        backgroundActive: lightColors.primary,
+        backgroundHover: lightColors.primary,
         border: 0,
         borderColorHover: "currentColor",
         boxShadow: "none",

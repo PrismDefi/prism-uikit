@@ -20,3 +20,4 @@ export { default as HelmetIcon } from "./Helmet";
 export { default as DocsIcon } from "./Docs";
 export { default as MediumIcon } from "./Medium";
 export { default as GithubIcon } from "./Github";
+export { default as ShieldIcon } from "./Shield";
